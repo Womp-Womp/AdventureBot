@@ -100,3 +100,61 @@ ADMIN_USER_ID=your_personal_discord_user_id_here
 This project is a labor of love. If you enjoy your adventures with Lore Weaver, consider supporting its development and operational costs!
 
 [**Buy me a coffee!**](https://buymeacoffee.com/womp_womp_?status=1)
+
+---
+
+## 8. Project Structure
+
+The project is organized as follows:
+
+*   `.github/`: Contains GitHub specific files like issue templates and workflows (if any).
+*   `src/`: Contains the main source code for the bot.
+    *   `main.py`: The main entry point for the Discord bot.
+    *   `bot/`: Houses Discord-specific logic.
+        *   `cogs/`: Contains different modules (cogs) for bot commands, like `adventure.py` for game-related commands.
+    *   `core/`: Contains the core application logic.
+        *   `story_engine.py`: Handles interactions with the Gemini API to generate story content.
+        *   `character.py`: Manages character creation, data models, and persistence.
+        *   `database.py`: Handles SQLite database setup, connections, and operations.
+    *   `utils/`: Contains utility functions and helper modules.
+        *   `config.py`: Loads and manages environment variables and bot configuration.
+*   `.env.example`: An example file showing the required environment variables. Copy this to `.env` and fill in your actual tokens and IDs.
+*   `.gitignore`: Specifies intentionally untracked files that Git should ignore.
+*   `LICENSE`: Contains the project's license information.
+*   `README.md`: This file, providing an overview of the project.
+*   `requirements.txt`: Lists the Python dependencies for the project.
+
+---
+
+## 9. Getting Started
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/lore-weaver.git
+    cd lore-weaver
+    ```
+2.  **Create and activate a virtual environment:**
+    *   **macOS/Linux:**
+        ```bash
+        python3 -m venv venv
+        source venv/bin/activate
+        ```
+    *   **Windows:**
+        ```bash
+        python -m venv venv
+        ./venv/Scripts/activate
+        ```
+3.  **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  **Set up environment variables:**
+    *   Copy `.env.example` to a new file named `.env`:
+        ```bash
+        cp .env.example .env
+        ```
+    *   Open `.env` and replace the placeholder values with your actual Discord bot token, Gemini API key, and your Discord user ID for admin commands.
+5.  **Run the bot:**
+    ```bash
+    python src/main.py
+    ```

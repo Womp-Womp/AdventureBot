@@ -192,3 +192,20 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+# Python
+# *.egg-info is covered by *.egg-info/ above
+# __pycache__/, *.pyc, *.pyo, *.pyd are covered by existing rules
+
+# Environment
+# .env, venv/, env/, ENV/ are covered by existing rules
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+lore_weaver.db
+
+# IDE/Editor specific
+# .idea/ and .vscode/ are present but commented out, uncomment if needed
+*.DS_Store
