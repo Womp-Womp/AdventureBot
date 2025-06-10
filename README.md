@@ -118,6 +118,8 @@ The project is organized as follows:
         *   `database.py`: Handles SQLite database setup, connections, and operations.
     *   `utils/`: Contains utility functions and helper modules.
         *   `config.py`: Loads and manages environment variables and bot configuration.
+*   `tests/`: Contains unit tests for the project.
+    *   `core/`: Tests for the core logic found in `src/core/`.
 *   `.env.example`: An example file showing the required environment variables. Copy this to `.env` and fill in your actual tokens and IDs.
 *   `.gitignore`: Specifies intentionally untracked files that Git should ignore.
 *   `LICENSE`: Contains the project's license information.
@@ -156,5 +158,14 @@ The project is organized as follows:
     *   Open `.env` and replace the placeholder values with your actual Discord bot token, Gemini API key, and your Discord user ID for admin commands.
 5.  **Run the bot:**
     ```bash
-    python src/main.py
+    python -m src.main
+    ```
+6.  **Running Tests:**
+    To run the unit tests, execute the following command from the project root:
+    ```bash
+    bash run_tests.sh
+    ```
+    Alternatively, you can run:
+    ```bash
+    python -m unittest discover tests
     ```
